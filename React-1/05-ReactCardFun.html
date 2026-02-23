@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .card {
+        box-shadow: 0 0 10px greenyellow;
+        padding: 10px;
+        width: 270px;
+        height: 400px;
+      }
+      #cardContainer {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </style>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      var dhoni =
+        "https://cdn.britannica.com/25/222725-050-170F622A/Indian-cricketer-Mahendra-Singh-Dhoni-2011.jpg";
+      var it =
+        "https://assets.promptbase.com/DALLE_IMAGES/UoqM975QECh2uGWmToFgwBa4i4c2/resized/1698694211001p_1000x1000.webp?alt=media&token=10433afe-fc66-4d56-bb99-80dfc65dc59a";
+
+      var virat =
+        "https://www.thestatesman.com/wp-content/uploads/2020/02/000_1OK50R.jpg";
+      var god =
+        "C:/Users/Sake Rahulsai/OneDrive/Pictures/Saved Pictures/wallpaper2you_118456.jpg";
+      function createCard(image, name) {
+        //writing JSX code inside function
+        return (
+          <div class="card">
+            <img src={image} width="100%" height="250" />
+            <h3>{name}</h3>
+            <p>
+              This is a Dynamic data about the card and the data about the
+              person
+            </p>
+            <button>Show Profile</button>
+          </div>
+        );
+      }
+      function multipleCard() {
+        return (
+          <div id="cardContainer">
+            {createCard(dhoni, "Rahul")}
+            {createCard(virat, "Vamsi")}
+            {createCard(it, "Krishna")}
+            {createCard(god, "Sai")}
+          </div>
+        );
+      }
+      ReactDOM.render(multipleCard(), document.getElementById("root"));
+    </script>
+  </body>
+</html>
