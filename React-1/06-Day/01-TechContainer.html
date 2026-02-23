@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .container{
+        box-shadow:0 0 10px green;
+        width: 1320px;
+        margin-bottom: 20px;
+        padding: 10px;
+      
+        }
+      #button{
+        color: rgb(67, 10, 226);
+        
+      }
+    </style>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="rootContainer"></div>
+<script type="text/babel">
+  function createContainer(header){
+    return(
+    <div class="container">
+      <h3>{header}</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum, laborum tempore pariatur unde architecto similique aliquid iusto at et. Labore quaerat, incidunt accusantium architecto dolores, officia nemo provident adipisci quis cum possimus maiores. Quaerat sint sunt facere, esse soluta maiores suscipit, ipsum asperiores molestias quisquam dolorum quas doloremque. Nobis modi eveniet placeat ea soluta, ab vel architecto ipsa accusantium voluptatum quisquam eligendi asperiores esse deleniti perferendis nesciunt qui. Iusto in rem, amet minima fugiat soluta ut incidunt est a id sed enim cum odit dolorem corrupti aliquid maxime? Hic in veritatis labore cupiditate tempore atque recusandae quam eveniet, culpa quia blanditiis ipsum nisi iure ex quaerat omnis a eum.</p>
+      <button id="button">Button for {header}</button>
+      </div>
+    )
+
+  }
+   function multipleContainer(){
+        return(<div>
+          {createContainer("React Js")}
+          {createContainer("Angular")}
+          {createContainer("Java Full Stack")}
+          <!--
+            <createContainer/>
+            <createContainer/>
+            <createContainer/>
+            -->
+        </div>
+      )
+      }
+      ReactDOM.render(multipleContainer(),document.getElementById("rootContainer"));
+
+  
+</script>
+  </body>
+</html>

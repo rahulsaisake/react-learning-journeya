@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .card{
+    box-shadow: 0 0 10px greenyellow;
+    padding: 10px;
+    width:270px;
+    height: 400px;
+      }
+      #cardContainer{
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </style>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+<script type="text/babel">
+ let card= 
+ <div class="card">
+        <img src="https://c.pxhere.com/images/a0/ba/a7c5ab9316d820783e4284b3dbf4-1674976.jpg!d" 
+        width="100%" height="250"/>
+        <h3>Sowmya</h3>
+        <p>Sowmya is the most buatiful girl in the vgp </p>
+        <button>Show Profile</button>
+  </div>
+  let container=<div id="cardContainer">
+    {card}
+    {card}
+    {card}
+    {card}
+
+    </div>
+   ReactDOM.render(container,document.getElementById('root'));
+</script>
+
+  </body>
+</html>
